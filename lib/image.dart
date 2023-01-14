@@ -12,16 +12,16 @@ class Dice extends StatefulWidget {
 class _DiceState extends State<Dice> {
   List diceImages = [
     "assets/image/dice.png",
-    "assets/image/dice1.png",
-    "assets/image/dice2.png",
-    "assets/image/dice3.png",
-    "assets/image/dice4.png",
-    "assets/image/dice5.png",
+    "assets/image/dice(1).png",
+    "assets/image/dice(2).png",
+    "assets/image/dice(3).png",
+    "assets/image/dice(4).png",
+    "assets/image/dice(5).png",
   ];
   List l1 = [];
   List counts = [0, 0, 0, 0, 0, 0];
   int i = 0, n = 0, y = 0, z = 0, sum = 0;
-  List nikunj = [];
+  List admin = [];
   TextEditingController txtno = TextEditingController();
 
   @override
@@ -30,10 +30,10 @@ class _DiceState extends State<Dice> {
       child: Scaffold(
         appBar: AppBar(
             title: Text("Dice play",
-                style: TextStyle(fontSize: 25, color: Colors.white24)),
+                style: TextStyle(fontSize: 25, color: Colors.black87)),
             centerTitle: true,
-            backgroundColor: Colors.black),
-        backgroundColor: Colors.grey,
+            backgroundColor: Colors.amber),
+        backgroundColor: Colors.black,
         body: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -42,16 +42,16 @@ class _DiceState extends State<Dice> {
                 controller: txtno,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black, width: 2)),
+                        borderSide: BorderSide(color: Colors.amber, width: 2)),
                     label: Text(
                       "Enter the no",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.amber),
                     ),
                     enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black)),
+                        borderSide: BorderSide(color: Colors.amber)),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black))),
-                style: TextStyle(color: Colors.black),
+                        borderSide: BorderSide(color: Colors.amber))),
+                style: TextStyle(color: Colors.amber),
               ),
               InkWell(
                 onTap: () {
@@ -109,9 +109,9 @@ class _DiceState extends State<Dice> {
                       l1.add(z);
                       sum = sum + z + 1;
                     }
-                    nikunj.clear();
-                    nikunj.add(l1);
-                    print("$nikunj");
+                    admin.clear();
+                    admin.add(l1);
+                    print("$admin");
                   });
                 },
                 child: Padding(
